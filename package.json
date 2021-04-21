@@ -1,0 +1,12 @@
+{
+  "main": "index.js",
+  "version": "20.0.0",
+  "scripts": {
+    "test": "mocha",
+    "build": "wrangler build",
+    "deploy:release": "wrangler publish",
+    "deploy:prod": "wrangler publish --env production",
+    "predeploy:release": "node ./pre-deploy.js stage=release",
+    "predeploy:prod": "node ./pre-deploy.js stage=production"
+  }
+}
